@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3 Cube</title>
+<style type="text/css">
+			#container {
+				width: 100%;
+				height: 100%;
+				margin: auto;
+			}
+
+			#collage {
+				height: 100%;
+				position: absolute;
+				top: 50%;
+				margin-top: -475px;
+			}
+		
+
+			#space {
+				
+				transition-property: transform;
+				transition-duration: 0.5s;
+			}
+			#space:hover {
+				opacity: 0.6;
+				-ms-transform: scale(1.2,1.2); 
+				-webkit-transform: scale(1.2,1.2); 
+				transform: scale(1.2,1.2);
+			}
+			
+			#space:active {
+				-ms-transform: scale(1.1,1.1); 
+				-webkit-transform: scale(1.1,1.1); 
+				transform: scale(1.1,1.1);
+			}
+			#star {
+				opacity: 0.8;
+				fill: yellow;
+				
+				transition-duration: 1s;
+				transition-timing-function: ease;
+				-webkit-transition-timing-function: ease;
+				transition-delay: 250ms;
+				-webkit-transition-delay: 250ms;
+				transition: all 1s ease 250ms;
+			
+			}
+			
+			
+			#star:hover {
+				opacity: 0.8;
+				fill: silver;
+				transform: translateX(400px) rotate(-360deg);
+				-webkit-transform: translateX(400px) rotate(-360deg);
+		
+			}
+
+			#star:active {
+				opacity: 0.8;
+				fill: aqua;
+				
+}
+			
+				
+		</style>
+		<style>
+			.container {
+				width: 200px;
+				margin: auto;
+				margin-top: 200px;
+				perspective: 600px;
+				-webkit-perspective: 600px;
+				perspective-origin: 100px 100px;
+				-webkit-perspective-origin: 100px 100px;
+				transform-style: preserve-3d;
+				-webkit-transform-style: preserve-3d;
+				transition-duration: 2s;
+				-webkit-transition-duration: 2s;
+			}
+
+			.container:active {
+				transform: rotate3d(0, 0, 1, 60deg);
+				-webkit-transform: rotate3d(0, 0, 1, 60deg);
+			}
+
+			.cube {
+				position: relative;
+				width: 200px;
+				opacity: 0.8;
+				transform-style: preserve-3d;
+				-webkit-transform-style: preserve-3d;
+				animation: spin 4s;
+				-webkit-animation: spin 4s;
+				animation-iteration-count: infinite;
+				-webkit-animation-iteration-count: infinite;
+				animation-timing-function: linear;
+				-webkit-animation-timing-function: linear;
+			}
+
+			.cube:hover{
+				animation-play-state: paused;
+				-webkit-animation-play-state: paused;
+				
+			}
+
+		
+
+			.cube div {
+				position: absolute;
+				top: 350px;
+				width: 200px;
+				height: 200px;
+			}
+
+			
+
+			@keyframes spin {
+				from {transform: rotateY(0deg);}
+				to {transform: rotateY(360deg);}
+			}
+
+			@-webkit-keyframes spin {
+				from {-webkit-transform: rotateY(0deg);}
+				to {-webkit-transform: rotateY(360deg);}
+			}
+
+			.back {
+				background-image: url(blockart.png);
+				background-size:200px 200px;
+				transform: translateZ(-100px) rotateY(180deg);
+				-webkit-transform: translateZ(-100px) rotateY(180deg);
+			}
+
+			.right {
+				
+				background-image: url(blockart.png);
+				background-size:200px 200px;
+				transform: rotateY(-270deg) translateX(100px);
+				-webkit-transform: rotateY(-270deg) translateX(100px);
+				transform-origin: top right;
+				-webkit-transform-origin: top right;
+			}
+
+			.left {
+				background-image: url(blockart.png);
+				background-size:200px 200px;
+				transform: rotateY(270deg) translateX(-100px);
+				-webkit-transform: rotateY(270deg) translateX(-100px);
+				transform-origin: center left;
+				-webkit-transform-origin: center left;
+			}
+
+			.top {
+				background-color: yellow;
+				transform: rotateX(-90deg) translateY(-100px);
+				-webkit-transform: rotateX(-90deg) translateY(-100px);
+				transform-origin: top center;
+				-webkit-transform-origin: top center;
+			}
+
+			.bottom {
+				background-color: yellow;
+				transform: rotateX(90deg) translateY(100px);
+				-webkit-transform: rotateX(90deg) translateY(100px);
+				transform-origin: bottom center;
+				-webkit-transform-origin: bottom center;
+			}
+
+			.front {
+				background-image: url(blockart.png);
+				background-size:200px 200px;
+				transform: translateZ(100px);
+				-webkit-transform: translateZ(100px);
+			}
+		</style>
+		
+	</head>
+
+	<body>
+
+		<div id="container">
+			<div id="collage">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="-100px" y="-100px" width="7000px" height="5000px" viewBox="0 0 7000 5000" style="enable-background:new 0 0 7000 5000;" xml:space="preserve">
+
+
+				<a xlink:href="http://i6.cims.nyu.edu/~tcc279/">
+				<g id="space">
+					
+						<image style="overflow:visible;" width="2000" height="1000" xlink:href="spacedandy.jpg" transform="matrix(0.8051 0 0 0.8051 0 54.7708)">
+					</image>
+				</g>
+				</a>
+			<a xlink:href=Vehicles.html>
+		<g id= "star">
+		<path xmlns="http://www.w3.org/2000/svg" sodipodi:type="star" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"  id="path3836" sodipodi:sides="5" sodipodi:cx="191.42857" sodipodi:cy="463.79074" sodipodi:r1="156.30948" sodipodi:r2="78.154739" sodipodi:arg1="1.2548261" sodipodi:arg2="1.8831446" inkscape:flatsided="false" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" inkscape:rounded="0" inkscape:randomized="0" d="m 240,612.36217 -72.58792,-74.19824 -102.273939,17.73208 48.135819,-91.96373 -48.468588,-91.78879 102.337488,17.36154 72.3187,-74.46067 15.11223,102.69375 93.16401,45.76956 -92.99762,46.10669 z" inkscape:transform-center-x="-10.046545" inkscape:transform-center-y="-0.058054477" transform="matrix(0.67685368,0,0,0.66365957,238.08448,100.24787)"</path>
+				</g>
+					</a>
+				
+
+				</svg>
+
+			</div> <!-- close collage div -->
+		</div> <!-- close container div -->
+	
+		<div class="container">
+			
+
+			
+
+			<div class="cube">
+				<div class="front"></div>
+				<div class="back"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+				<div class="left"></div>
+				<div class="right"></div>
+			</div>
+
+			
+
+			
+		</div>
+
+	</body>
+
+</html>
